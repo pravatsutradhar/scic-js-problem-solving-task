@@ -96,3 +96,20 @@ console.log(checkPalindrome("hello")); // false
 
 
 
+// Problem 4: Find the Maximum Number
+// Write a function that takes an array of numbers and returns the largest number.
+
+// Example:
+
+// Input: [5, 1, 9, 3]
+// Output: 9
+
+function findMax(arr) {
+    return Math.max(...arr);
+}
+// Example usage:
+console.log(findMax([5, 1, 9, 3])); // Output: 9
+
+// Arrow function version
+const maxNumber = (arr) => Math.max(...arr);
+console.log(maxNumber([5, 1, 9, 3])); // 9
