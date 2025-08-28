@@ -35,3 +35,34 @@ const strReverse = str => str.split("").reverse().join("");
 console.log(strReverse("hello")); // "olleh"
 
 
+// Problem 2: Count Vowels in a String
+// Write a function that counts how many vowels (a, e, i, o, u) are in a given string.
+
+// Example:
+
+// Input: "programming"
+// Output: 3
+
+function countVowels(str) {
+    const vowels = 'aeiouAEIOU';
+    let count = 0;
+
+    for (let char of str) {
+        if (vowels.includes(char)) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+// Example usage:
+console.log(countVowels("programming")); // Output: 3
+
+
+const countVowels = (str) => (str.match(/[aeiou]/gi) || []).length;
+
+console.log(countVowels("programming")); // Output: 3
+
+
+
