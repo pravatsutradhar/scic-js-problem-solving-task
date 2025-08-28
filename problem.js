@@ -133,3 +133,135 @@ console.log(removeDuplicates([1, 2, 2, 3, 4, 4])); // Output: [1, 2, 3, 4]
 // Arrow function version
 const uniqueArray = (arr) => [...new Set(arr)];
 console.log(uniqueArray([1, 2, 2, 3, 4, 4])); // [1, 2, 3, 4]
+
+
+// Problem 6: Sum of All Numbers in an Array
+// Write a function that returns the sum of all numbers in an array.
+
+// Example:
+
+// Input: [1, 2, 3, 4]
+// Output: 10
+
+function sumArray(arr) {
+    return arr.reduce((acc, num) => acc + num, 0);
+}
+// Example usage:
+console.log(sumArray([1, 2, 3, 4])); // Output: 10
+// Arrow function version
+const arraySum = (arr) => arr.reduce((acc, num) => acc + num, 0);
+console.log(arraySum([1, 2, 3, 4])); // 10
+
+// Problem 7: Find Even Numbers in an Array
+// Write a function that returns all even numbers from a given array.
+
+// Example:
+
+// Input: [1, 2, 3, 4, 5, 6]
+// Output: [2, 4, 6]
+
+function findEvenNumbers(arr) {
+    return arr.filter(num => num % 2 === 0);
+}
+// Example usage:
+console.log(findEvenNumbers([1, 2, 3, 4, 5, 6])); // Output: [2, 4, 6]
+
+// Arrow function version
+const evenNumbers = (arr) => arr.filter(num => num % 2 === 0);
+console.log(evenNumbers([1, 2, 3, 4, 5, 6])); // [2, 4, 6]
+
+
+// Problem 8: Capitalize First Letter of Each Word
+// Write a function that capitalizes the first letter of each word in a string.
+
+// Example:
+
+// Input: "hello world"
+// Output: "Hello World"
+
+function capitalizeWords(str) {
+    return str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+}
+// Example usage:
+console.log(capitalizeWords("hello world")); // Output: "Hello World"
+
+// Arrow function version
+const capitalizeFirstLetter = (str) => 
+  str.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");   
+console.log(capitalizeFirstLetter("hello world")); // "Hello World"
+
+
+// Problem 9: Find the Factorial of a Number
+// Write a function that calculates the factorial of a number using a loop.
+
+// Example:
+
+// Input: 5
+// Output: 120
+
+function factorial(n) {
+    let result = 1;
+    for (let i = 2; i <= n; i++) {
+        result *= i;
+    }
+    return result;
+}
+
+// Example usage:
+console.log(factorial(5)); // Output: 120
+
+// Arrow function version
+const fact = (n) => {
+    let result = 1;
+    for (let i = 2; i <= n; i++) {
+        result *= i;
+    }
+    return result;
+}
+
+console.log(fact(5)); // 120
+
+// Problem 10: PingPong Challenge
+// Write a function that prints numbers from 1 to 20.
+
+// Example:
+
+// For multiples of 3, print "Ping"
+// For multiples of 5, print "Pong"
+// For multiples of both 3 and 5, print "PingPong"
+// If the number is not a multiple of 3 or 5, print the number itself
+// Example Output:
+
+// 1, 2, Ping, 4, Pong, Ping, 7, 8, Ping, Pong, 11, Ping, 13, 14, PingPong, 16 …..
+
+function pingPong() {
+    for (let i = 1; i <= 20; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("PingPong");
+        } else if (i % 3 === 0) {
+            console.log("Ping");
+        } else if (i % 5 === 0) {
+            console.log("Pong");
+        } else {
+            console.log(i);
+        }
+    }
+}
+// Example usage:
+pingPong(); // Output: 1, 2, Ping, 4, Pong, Ping, 7, 8, Ping, Pong, 11, Ping, 13, 14, PingPong, 16 …..
+
+// Arrow function version
+const pingPongChallenge = () => {
+    for (let i = 1; i <= 20; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("PingPong");
+        } else if (i % 3 === 0) {
+            console.log("Ping");
+        } else if (i % 5 === 0) {
+            console.log("Pong");
+        } else {
+            console.log(i);
+        }
+    }
+}
+pingPongChallenge(); // 1, 2, Ping, 4, Pong, Ping, 7, 8, Ping, Pong, 11, Ping, 13, 14, PingPong, 16 …..
