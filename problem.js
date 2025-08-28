@@ -113,3 +113,23 @@ console.log(findMax([5, 1, 9, 3])); // Output: 9
 // Arrow function version
 const maxNumber = (arr) => Math.max(...arr);
 console.log(maxNumber([5, 1, 9, 3])); // 9
+
+
+
+// Problem 5: Remove Duplicates from an Array
+// Write a function that removes all duplicate numbers from an array.
+
+// Example:
+
+// Input: [1, 2, 2, 3, 4, 4]
+// Output: [1, 2, 3, 4]
+
+
+function removeDuplicates(arr) {
+    return [...new Set(arr)];
+}
+// Example usage:
+console.log(removeDuplicates([1, 2, 2, 3, 4, 4])); // Output: [1, 2, 3, 4]
+// Arrow function version
+const uniqueArray = (arr) => [...new Set(arr)];
+console.log(uniqueArray([1, 2, 2, 3, 4, 4])); // [1, 2, 3, 4]
