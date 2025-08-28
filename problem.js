@@ -43,7 +43,7 @@ console.log(strReverse("hello")); // "olleh"
 // Input: "programming"
 // Output: 3
 
-function countVowels(str) {
+function countVowel(str) {
     const vowels = 'aeiouAEIOU';
     let count = 0;
 
@@ -57,12 +57,42 @@ function countVowels(str) {
 }
 
 // Example usage:
-console.log(countVowels("programming")); // Output: 3
+console.log(countVowel("programming")); // Output: 3
 
 
 const countVowels = (str) => (str.match(/[aeiou]/gi) || []).length;
 
 console.log(countVowels("programming")); // Output: 3
+
+
+// Problem 3: Check for Palindrome
+// Write a function that checks if a string is a palindrome (reads the same forward and backward).
+
+// Example:
+
+// Input: "madam"
+// Output: true
+// Input: "hello"
+// Output: false
+
+function isPalindrome(str) {
+    const reversedStr = str.split('').reverse().join('');
+    return str === reversedStr;
+}
+// Example usage:
+console.log(isPalindrome("madam")); // Output: true
+console.log(isPalindrome("hello")); // Output: false
+
+// Arrow function version
+const checkPalindrome = (s) => {
+    const reversed = s.split("").reverse().join("");
+    return s === reversed;
+}
+
+
+// Example usage
+console.log(checkPalindrome("madam")); // true  
+console.log(checkPalindrome("hello")); // false
 
 
 
